@@ -25,6 +25,6 @@ Virus* Virus::copy() {
 
 Status Virus::onTurn() {
     Status status = AbstractSpecies::onTurn();
-    if (Status::StatusDoNothing != status) { return status; }
+    if (StatusDoNothing != status) { return status; }
     return rotateRight();
 }
