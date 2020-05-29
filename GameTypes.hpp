@@ -51,7 +51,7 @@ typedef struct __Position {
     bool operator !=(struct __Position p) { return !(*this == p); }
     bool isValid() { return r >= 0 && c >= 0 && r < 255 && c < 255; }
     Word pathLengthTo(struct __Position p) {
-        return !p.isValid() ? kMax : abs(c - p.c) + abs(r - p.r);
+        return !p.isValid() ? kMax : abs(c - p.c) + abs(r - p.r); // maybe wrong calculation because of unsigned type.
     }
     static struct __Position none() { return __Position(255, 255); }
 } Position;
